@@ -27,6 +27,11 @@ app.use(cookieParser());
 // Middleware to parse JSON
 app.use(express.json());
 
+app.use("/api/home", (req, res) => {
+
+  res.status(200).json({ message: "welcome to home backend" });
+});
+
 // Database connection
 dbCon();
 
